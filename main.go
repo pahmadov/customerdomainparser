@@ -21,7 +21,7 @@ func readOptions() (*Options, error) {
 	opts.path = flag.String("path", "./customers.csv", "Path to the file with customer data")
 	opts.skipHeader = flag.Bool("skipHeader", true, "Skip header of csv file")
 	opts.fieldIndex = flag.Int("field", 0, "Index of email field in csv file")
-	opts.outFile = flag.String("out", "./output.csv", "Optional: output file path. If empty program will output results to the terminal")
+	opts.outFile = flag.String("out", "", "Optional: output file path. If empty program will output results to the terminal")
 	flag.Parse()
 
 	if err := opts.Validate(); err != nil {
